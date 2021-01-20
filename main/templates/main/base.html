@@ -1,0 +1,87 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+  
+
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{% static 'main/base.css' %}">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    {% if title %}
+        <title>Tripasect - {{ title }}</title>
+    {% else %}
+        <title>Tripasect</title>
+    {% endif %}
+    <link rel="icon" type="image/png" href="/media/tripasect.png"/>
+    
+  </head>
+  <body>
+
+    <!-- Navbar Section -->
+    <nav class="navbar navbar-toggleable navbar-inverse bg-inverse fixed-top">
+        <div class="container">
+            <button class="navbar-toggler navbar-toggler-right" type="button " data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <a href="/" class="navbar-brand">Tripasect</a>
+            
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav ml-auto">
+
+                    <li class="nav-item"><a href="/blog" class="nav-link">Blog</a></li>
+
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">University</a>
+                            <div class="dropdown-menu dropdown-content">
+                                <a href="/university/basic-programming">Basic Programming</a>
+                                <a href="/university/linear-algebra">Linear Algebra</a>
+                                <a href="/university/advanced-programming">Advanced Programming</a>
+                            </div>
+                    </li>
+                    
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Contact</a>
+                            <div class="dropdown-menu dropdown-content">
+                                <a href="mailto:me@tripasect.com">Email</a>
+                                <a href="mailto:sajjadipour@ut.ac.ir">University Email</a>
+                                <a href="https://github.com/tripasect">GitHub</a>
+                                <a href="https://t.me/tripasect">Telegram</a>
+                                <a href="https://www.twitter.com/tripasect">Twitter</a>
+                                <a href="https://join.skype.com/invite/xgnW0LRUu2eY">Skype</a>
+                                <a href="https://www.instagram.com/tripasect">Instagram</a>
+                                <a href="https://open.spotify.com/user/vo7mrasv0stkeboh9uf5krnrd?si=RnTJ_0eVSDurmiYqb94oRA">Spotify</a>
+                            </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+          <div class="home-inner">
+        <div class="row">
+            <div class="col">         
+                <div class="container">
+                <h2> {{ title }} </h2>    
+                {% block content %} {% endblock %}
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+ 
+    </body>
+</html>
